@@ -256,3 +256,122 @@ body {
 .modal-close:hover {
   color: #ff4e6a;
 }
+/* ====== Responsive (Mobile/Tablet) ====== */
+
+/* กันขอบจอ + กันล้นแนวนอน */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ทำให้ section หลักไม่ต้องดันซ้ายเยอะบนมือถือ */
+@media (max-width: 768px) {
+
+  .ProjectHeader {
+    padding: 28px 18px;
+    border-radius: 28px 16px 0 0;
+  }
+
+  .header-words {
+    margin-left: 0;
+    margin-top: 28px;
+    font-size: 22px;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  /* จาก 2 คอลัมน์ -> เรียงลง */
+  .section-row {
+    flex-direction: column;
+    gap: 22px;
+    width: 92%;
+    margin-top: 22px;
+  }
+
+  .left-content {
+    font-size: 18px;
+    flex: unset;
+  }
+
+  .about-card {
+    font-size: 16px;
+    padding: 18px 18px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+
+  /* รูปวงกลม: กำหนดขนาดให้ชัด ไม่งั้นบางทีใหญ่เกิน */
+  .circle-img {
+    width: 220px;
+    height: 220px;
+    max-width: 70vw;
+    max-height: 70vw;
+    margin: 0 auto;
+  }
+
+  /* รูปเอียง: ลดขนาด + กันล้น */
+  .photo1 {
+    width: 220px;
+    height: 220px;
+    max-width: 70vw;
+    max-height: 70vw;
+  }
+
+  .photo2 {
+    width: 180px;
+    height: 180px;
+    max-width: 55vw;
+    max-height: 55vw;
+    margin-left: 0;
+  }
+
+  .projects-header {
+    margin-left: 0;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  /* grid: 2 ช่อง -> 1 ช่อง */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-left: 0;
+    width: 92%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .project-card {
+    padding: 16px 16px;
+    border-radius: 18px;
+  }
+
+  .project-card h3 {
+    font-size: 16px;
+  }
+
+  .project-card p {
+    font-size: 13px;
+  }
+
+  .delete-btn {
+    width: 100%;
+  }
+}
+
+/* Tablet ปรับกลาง ๆ (ถ้าต้องการ) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    margin-left: 0;
+    width: 92%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .header-words {
+    margin-left: 0;
+    text-align: center;
+  }
+}
