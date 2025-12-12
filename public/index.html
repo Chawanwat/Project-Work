@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <div class = "ProjectHeader">
+    <div class = "header-words">
+   <h1>Projects & Works By Clueang </h1>
+    </div>
+    </div>
+    
+   <div class="section-row">
+    
+    <div class="left-content">
+        <h2>About Me</h2>
+        <div class="about-card">
+            I'm Chawanwat Luangsirinapa, currently studying Computer Engineering and Digital Technology (CEDT) at Chulalongkorn University. 
+            My main interests are web development and AI technologies.
+            I'm comfortable working with C++, JavaScript, and CSS, and I can communicate in both Thai and English.
+            I started programming when I entered university and have been continuously improving myself through various projects and hands-on learning.
+        </div>
+
+        <h2>Contact</h2>
+        <div class="about-card">
+            Gmail: tan05ttw@gmail.com <br>
+            Github: <a href = https://github.com/Chawanwat>  Chawanwat </a> <br>
+            Tel: +66 61-847-1078
+        </div>
+    </div>
+
+    <div class="right-content">
+       
+            <img src="picture/IMG_4664.png" class="circle-img photo1"><br>
+       
+        
+        <img src="picture/DSCF2886.jpeg" class="circle-img photo2">
+       
+    </div>
+   
+   
+
+</div>
+
+        
+    <div class="projects-wrapper">
+        <div class="projects-header">
+  <h2>Projects</h2>
+        </div>
+
+ <div class="projects-grid" id="projectsGrid">
+    <!-- การ์ดจะถูก render ด้วย JS ทั้งหมด -->
+    
+    <!-- ปุ่ม + -->
+    <button class="project-card add-card" id="addProjectBtn">
+      <span class="plus">+</span>
+    </button>
+  </div>
+</div>
+
+<!--  Popup  -->
+<div id="projectModal" class="modal hidden">
+  <div class="modal-content">
+    <h3>Add New Project</h3>
+
+    <label>
+      Admin password
+      <input type="password" id="modalPassword">
+    </label>
+
+    <label>
+      Project title
+      <input type="text" id="modalTitle">
+    </label>
+
+    <label>
+      Link text
+      <input type="text" id="modalLinkText" placeholder="เช่น: Open project">
+    </label>
+
+    <label>
+      URL
+      <input type="text" id="modalUrl" placeholder="https://...">
+    </label>
+
+    <p id="modalError" class="error"></p>
+
+    <div class="modal-actions">
+      <button id="modalCancel">Cancel</button>
+      <button id="modalSave">Save</button>
+    </div>
+  </div>
+</div>
+
+<div id="deleteModal" class="modal hidden">
+  <div class="modal-content">
+
+    <button class="modal-close" id="deleteClose">✕</button>
+
+    <h3>Delete Project</h3>
+
+    <p>Please input password to remove</p>
+
+    <input type="password" id="deletePassword" placeholder="password">
+
+    <p id="deleteError" class="error"></p>
+
+    <div class="modal-actions">
+      <button id="deleteCancel">Cancel</button>
+      <button id="deleteConfirm">Delete</button>
+    </div>
+
+  </div>
+</div>
+
+
+</body>
+</html> 

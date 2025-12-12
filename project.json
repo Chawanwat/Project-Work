@@ -1,0 +1,15 @@
+{
+  "password": "tan12345ttt",
+  "projects": [
+    {
+      "title": "AI Recipe Manager",
+      "linkText": "Open",
+      "url": "https://github.com/..."
+    },
+    {
+      "title": "Mini CPU",
+      "linkText": "View",
+      "url": "https://github.com/..."
+    }
+  ]
+}

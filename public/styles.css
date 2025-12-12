@@ -1,0 +1,258 @@
+body {
+    
+    font-family: 'League Spartan', 'sans-serif';
+    
+}
+
+
+
+.ProjectHeader{
+    background: linear-gradient(to bottom, #cfcdfb, #ffffff);
+    padding: 40px 30px;
+    border-radius: 40px 20px 0 0; 
+}
+
+.header-words {
+    
+   margin-left: 40px;
+    margin-top: 80px;
+    font-size: 30px;
+    line-height: 56px;
+    background: linear-gradient(90deg, #5170ff, #ffa3ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0px;
+    
+}
+
+
+
+.section-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.left-content {
+  font-size: 24px;
+  flex: 1.6; 
+}
+.right-content {
+  display: flex;
+  flex-direction: column;   
+  gap: 30px;               
+  align-items: center;      
+}
+
+.circle-img {
+  
+
+ border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+}
+.about-card {
+  position: relative;
+  padding: 22px 28px;
+  background: white;
+  border-radius: 28px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  font-size: 20px;
+}
+
+.about-card::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  background: linear-gradient(90deg, #5170ff, #ffa3ff);
+  border-radius: 32px;
+  z-index: -1;
+}
+
+.photo1 {
+    width: 350px;
+    height: 350px;
+    max-width: 40vw;
+    max-height: 40vw;
+    rotate:  -10deg;
+   
+}
+.photo2 {
+    width: 280px;
+    height: 280px;
+    max-width: 30vw;
+    max-height: 30vw;
+    margin-left: 70px;
+    rotate: 20deg;
+}
+.projects-header{
+    
+    font-size: 24px;
+    margin-left: 50px;
+
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.project-card {
+  position: relative;
+  padding: 18px 22px;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border: 3px solid transparent;
+  background-clip: padding-box, border-box;
+  border-image: linear-gradient(90deg, #5170ff, #ffa3ff) 1;
+  text-align: left;
+}
+
+.project-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.project-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+
+.add-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-image: linear-gradient(90deg, #c2c9ff, #ffa3ff) 1;
+}
+
+.add-card .plus {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+
+.modal.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 24px 28px;
+  border-radius: 20px;
+  width: 320px;
+  max-width: 90%;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  font-size: 14px;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 2px;
+  font-family: inherit;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.modal-actions button {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+#modalCancel {
+  background: #eee;
+}
+
+#modalSave {
+  background: linear-gradient(90deg, #5170ff, #ffa3ff);
+  color: white;
+}
+
+.error {
+  color: #e63946;
+  min-height: 18px;
+  font-size: 12px;
+  margin-top: 4px;
+}
+.delete-btn {
+  margin-top: 12px;
+  padding: 6px 14px;
+  background: #ff4e6a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+ 
+}
+
+.delete-btn:hover {
+  background: #e30036;
+}
+#deleteConfirm {
+  background: #ff4e6a;
+  color: white;
+}
+#deleteConfirm:hover {
+  background: #d9002e;
+}
+.modal-content {
+  position: relative;  
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+
+.modal-close:hover {
+  color: #ff4e6a;
+}
